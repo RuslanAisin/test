@@ -1,0 +1,8 @@
+{
+    "viewportHeight": 1000,
+    "viewportWidth": 1400,
+    "retries": {
+        "runMode": 1
+    },
+    "chromeWebSecurity": false
+}
