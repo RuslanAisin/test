@@ -10,6 +10,7 @@ describe('Yandex registration', () => {
         firstname = `firstName${random1}`;
         const random2 = value2();
         lastname = `lastName${random2}`;
+        const phone = `911${random1}`;
 
         cy.visit('https://passport.yandex.ru/registration');
         cy.title().should('eq', 'Регистрация');
@@ -19,7 +20,9 @@ describe('Yandex registration', () => {
         cy.get('#password').type(lastname, {force: true});
         cy.get('#password_confirm').type(lastname, {force: true});
         cy.get('#keep_unsubscribed').check();
-        cy.get('#phone').type(random1, {force:true});
+        cy.get('#phone').type(phone, {force:true});
         cy.get('button[type="submit"]').click();
+        cy.get('#phoneCode').type(phone, {force:true});
+        cy.get('.form__popup-error').contains('Неправильный код, попробуйте ещё раз');
     })
 });

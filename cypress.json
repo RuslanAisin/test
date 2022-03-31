@@ -1,4 +1,4 @@
-{
+{   "baseUrl": "https://calendar.yandex.ru",
     "viewportHeight": 1000,
     "viewportWidth": 1400,
     "retries": {
